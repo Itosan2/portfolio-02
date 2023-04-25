@@ -1,29 +1,85 @@
 import React from "react";
 // import FontChecker from "./FontChecker";
 
+const statItem = [
+  {
+    id: 1,
+    progTitle: "HTML5",
+    progStat: "70",
+  },
+  {
+    id: 2,
+    progTitle: "CSS3",
+    progStat: "60",
+  },
+  {
+    id: 3,
+    progTitle: "JAVASCRIPT",
+    progStat: "55",
+  },
+  {
+    id: 4,
+    progTitle: "REACT JS",
+    progStat: "45",
+  },
+  {
+    id: 5,
+    progTitle: "PYTHON",
+    progStat: "20",
+  },
+  {
+    id: 6,
+    progTitle: "DJANGO",
+    progStat: 30,
+  },
+];
+
+const completeItem = [
+  {
+    id: 1,
+    completeNo: 60,
+    completeItem: "HTML5",
+  },
+  {
+    id: 2,
+    completeNo: 60,
+    completeItem: "CSS5",
+  },
+  {
+    id: 3,
+    completeNo: 30,
+    completeItem: "JAVASCRIPT",
+  },
+  {
+    id: 1,
+    completeNo: 20,
+    completeItem: "REACT",
+  },
+];
+
 export default function About(props) {
   return (
     <section className={`section sec2 about ${props.class}`} id="about">
       <div className="main-title">
         <h2>
           About<span> me</span>
-          <span className="bg-text">my stats</span>
+          {/* <span className="bg-text">my stats</span> */}
         </h2>
       </div>
       <div className="about-container">
         <div className="left-about">
-          <h4 className="text-info2">Information About me</h4>
+          <h4 className="text-info2">Other Skills</h4>
           <p>
-            Another selection of my Work. <br />
+            I generated financial statements, including Balance Sheet, Income
+            Statement, and Cash Flow, using Excel.
             <br />
-            La musica delectus dolore fugiat exercitationem a, ipsum quidem quo
-            enim natus accusamus labore dolores nam. Unde. Lorem ipsum dolor sit
-            amet consectetur, adipisicing elit. Harum non necessitatibus
-            deleniti eum soluta.
+            <br />
+            Others : Balanced Score-card, ISO Documentation Management sytem,
+            Debtor and Inventory Management.
           </p>
-          <div className="btn-con">
-            <a href="" className="main-btn">
-              <span className="btn-text">Download CV</span>
+          <div className="btn-con" onClick={props.handleClick}>
+            <a href="#" className="main-btn">
+              <span className="btn-text">Portfolio Page</span>
               <span className="btn-icon">
                 <i className="fas fa-download"></i>
               </span>
@@ -31,108 +87,44 @@ export default function About(props) {
           </div>
         </div>
         <div className="right-about">
-          <div className="about-item">
-            <div className="abt-text">
-              <p className="large-text">560+</p>
-              <p className="small-text">
-                Projects
-                <br />
-                Completed
-              </p>
-            </div>
-          </div>
-          <div className="about-item">
-            <div className="abt-text">
-              <p className="large-text">560+</p>
-              <p className="small-text">
-                Projects
-                <br />
-                Completed
-              </p>
-            </div>
-          </div>
-          <div className="about-item">
-            <div className="abt-text">
-              <p className="large-text">560+</p>
-              <p className="small-text">
-                Projects
-                <br />
-                Completed
-              </p>
-            </div>
-          </div>
-          <div className="about-item">
-            <div className="abt-text">
-              <p className="large-text">560+</p>
-              <p className="small-text">
-                Projects
-                <br />
-                Completed
-              </p>
-            </div>
-          </div>
+          {completeItem.map((item) => {
+            return (
+              <div key={item.id} className="about-item">
+                <div className="abt-text">
+                  <p className="large-text">{item.completeNo} + </p>
+                  <p className="small-text">
+                    {item.completeItem}
+                    <br />
+                    Completed tutorial / Projects
+                  </p>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
       <div className="about-stats">
         <h4 className="stat-title">My Skills</h4>
         <div className="progress-bars">
-          <div className="progress-bar">
-            <p className="prog-title">html5</p>
-            <div className="progress-con">
-              <p className="prog-text">80%</p>
-              <div className="progress">
-                <span className="html"></span>
+          {statItem.map((item) => {
+            return (
+              <div key={item.id} className="progress-bar">
+                <p className="prog-title">{item.progTitle}</p>
+                <div className="progress-con">
+                  <p className="prog-text">{item.progStat + "%"}</p>
+                  <div className="progress">
+                    <span
+                      className="html"
+                      style={{ width: item.progStat + "%" }}
+                    ></span>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div className="progress-bar">
-            <p className="prog-title">css3</p>
-            <div className="progress-con">
-              <p className="prog-text">95%</p>
-              <div className="progress">
-                <span className="css"></span>
-              </div>
-            </div>
-          </div>
-          <div className="progress-bar">
-            <p className="prog-title">javascript</p>
-            <div className="progress-con">
-              <p className="prog-text">75%</p>
-              <div className="progress">
-                <span className="js"></span>
-              </div>
-            </div>
-          </div>
-          <div className="progress-bar">
-            <p className="prog-title">ReactJS</p>
-            <div className="progress-con">
-              <p className="prog-text">75%</p>
-              <div className="progress">
-                <span className="react"></span>
-              </div>
-            </div>
-          </div>
-          <div className="progress-bar">
-            <p className="prog-title">NodeJS</p>
-            <div className="progress-con">
-              <p className="prog-text">87%</p>
-              <div className="progress">
-                <span className="node"></span>
-              </div>
-            </div>
-          </div>
-          <div className="progress-bar">
-            <p className="prog-title">Python</p>
-            <div className="progress-con">
-              <p className="prog-text">70%</p>
-              <div className="progress">
-                <span className="python"></span>
-              </div>
-            </div>
-          </div>
+            );
+          })}
         </div>
       </div>
-      <h4 className="stat-title">My Timeline</h4>
+      {/* <h4 className="stat-title">My Timeline</h4>
       <div className="timeline">
         <div className="timeline-item">
           <div className="tl-icon">
@@ -212,7 +204,7 @@ export default function About(props) {
             vero fugit.
           </p>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }

@@ -1117,7 +1117,7 @@ section {
 }
 
 .text-info2:before {
-  content: "INFORMATION ABOUT ME";
+  content: "Other Skills";
   position: absolute;
   align-items: center;
   top: 0;

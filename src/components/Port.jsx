@@ -58,7 +58,7 @@ export default function Port() {
         <div className="main-title">
           <h2>
             My <span>Portfolio</span>
-            <span className="bg-text">Portfolio</span>
+            {/* <span className="bg-text">Portfolio</span> */}
           </h2>
         </div>
         <p className="port-para">Here is a selection of my works</p>

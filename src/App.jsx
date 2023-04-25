@@ -49,7 +49,12 @@ function App() {
       {activeControl === "Home" && (
         <Home handleClick={() => handleControlClick("Port")} />
       )}
-      {activeControl === "About" && <About class={"active"} />}
+      {activeControl === "About" && (
+        <About
+          class={"active"}
+          handleClick={() => handleControlClick("Port")}
+        />
+      )}
       {activeControl === "Port" && <Port />}
       {activeControl === "Portfolio" && <Portfolio />}
       {activeControl === "Contact" && <Contact />}
