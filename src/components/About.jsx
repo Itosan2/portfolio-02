@@ -1,4 +1,5 @@
 import React from "react";
+import Home from "./Home";
 // import FontChecker from "./FontChecker";
 
 const statItem = [
@@ -70,15 +71,15 @@ export default function About(props) {
         <div className="left-about">
           <h4 className="text-info2">Other Skills</h4>
           <p>
-            I generated financial statements, including Balance Sheet, Income
-            Statement, and Cash Flow, using Excel.
+            Using Excel Visual Basic for Applocations to generate Financial
+            Statement and reports (eg Balance Sheet, Income Statement, cash flow
+            and Budget)
             <br />
-            <br />
-            Others : Balanced Score-card, ISO Documentation Management sytem,
-            Debtor and Inventory Management.
+            Other reports : Balanced Score-card, ISO Documentation Management
+            sytem, Debtor collection and Inventory Management.
           </p>
           <div className="btn-con" onClick={props.handleClick}>
-            <a href="#" className="main-btn">
+            <a href={<Home />} className="main-btn">
               <span className="btn-text">Portfolio Page</span>
               <span className="btn-icon">
                 <i className="fas fa-download"></i>

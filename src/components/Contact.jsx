@@ -8,7 +8,7 @@ export default function Contact() {
         <div className="main-title">
           <h2>
             Contact <span>Me</span>
-            <span className="bg-text">Contact</span>
+            {/* <span className="bg-text">Contact</span> */}
           </h2>
         </div>
         <div className="contact-content-con">

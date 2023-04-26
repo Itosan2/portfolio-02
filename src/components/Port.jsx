@@ -11,7 +11,7 @@ const portItem = [
     id: 1,
     img: img1,
     title: "Building a neat-looking portfolio website",
-    text: "Create a desktop and mobile version website from Adobe XD. Use some cold css styling with a bit of Javascript",
+    text: "Create a desktop and mobile version website from Adobe XD. Using some cold css styling with a bit of Javascript",
     url: "https://itosan2.github.io/portfolio/",
   },
   {
@@ -39,7 +39,7 @@ const portItem = [
     id: 5,
     img: img5,
     title: "Tic Tac Toe migration",
-    text: "This is a original application before migrating to React with TypeScript.",
+    text: "Creating this base application before migrating to React with TypeScript.",
     url: "https://itosan2.github.io/tictactoe2/",
   },
   {
