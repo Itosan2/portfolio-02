@@ -59,8 +59,11 @@ function App() {
       {activeControl === "Portfolio" && <Portfolio />}
       {activeControl === "Contact" && <Contact />}
 
-      <div className="mode-btn" onClick={handleColorMode}></div>
-      <div className="controls">{sideEl}</div>
+      {/* <div className="mode-btn" onClick={handleColorMode}></div> */}
+      <div className="controls">
+        <div className=" mode-btn" onClick={handleColorMode}></div>
+        {sideEl}
+      </div>
     </div>
   );
 }

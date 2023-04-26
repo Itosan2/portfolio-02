@@ -127,13 +127,14 @@ section {
 .controls {
   position: fixed;
   z-index: 10;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 8%;
+  transform: translateY(-8%);
   right: 3%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-top: 50px;
 }
 .controls .active-btn {
   background-color: var(--color-secondary) !important;
@@ -171,9 +172,11 @@ section {
 /* Light-mode */
 
 .mode-btn {
-  position: fixed;
-  top: 50px;
-  right: 40px;
+  position: relative;
+  /* top: 50px;
+  right: 40px; */
+  /* top: 0; */
+  /* right: 10%; */
   width: 40px;
   height: 22px;
   border-radius: 100px;
@@ -182,6 +185,7 @@ section {
   outline: 1px solid black;
   box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.3);
   cursor: pointer;
+  margin-bottom: 50px;
   /* transition: all 0.4s ease; */
 }
 
@@ -1326,6 +1330,10 @@ section {
   .main-title h2 .bg-text {
     font-size: 4rem;
   }
+
+  .mode-btn {
+    margin: 0 50px;
+  }
   .controls {
     top: auto;
     bottom: 0;
@@ -1335,7 +1343,9 @@ section {
     transform: translateX(-50%);
     width: 100%;
     background-color: var(--color-grey-5);
+    padding-top: 0px;
   }
+
   .controls .control {
     margin: 1rem 0.3rem;
   }
