@@ -5,8 +5,16 @@ import img3 from "../assets/port3.jpg";
 import img4 from "../assets/port4.jpg";
 import img5 from "../assets/port5.jpg";
 import img6 from "../assets/port6.jpg";
+import img7 from "../assets/port7.jpg";
 
 const portItem = [
+  {
+    id: 7,
+    img: img7,
+    title: "e-Commerce",
+    text: "React apps with Tailwind CSS. Using React Router and experiencing different way to deploy to Github",
+    url: "https://itosan2.github.io/ecomm/",
+  },
   {
     id: 1,
     img: img1,
