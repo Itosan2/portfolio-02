@@ -29,7 +29,7 @@ const portItem = [
   {
     id: 11,
     img: img11,
-    title: "Food",
+    title: "Food Webpage",
     text: "Using React Router 6 and working with images editing. Exploring with some Framer Motion animation ",
     url: "https://itosan2.github.io/food/",
   },
