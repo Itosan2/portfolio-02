@@ -1,5 +1,6 @@
 import React from "react";
 import Home from "./Home";
+import Port from "./Port";
 // import FontChecker from "./FontChecker";
 
 const statItem = [
@@ -79,7 +80,7 @@ export default function About(props) {
             sytem, Debtor collection and Inventory Management.
           </p>
           <div className="btn-con" onClick={props.handleClick}>
-            <a href={<Home />} className="main-btn">
+            <a href={<Port />} className="main-btn">
               <span className="btn-text">Portfolio Page</span>
               <span className="btn-icon">
                 <i className="fas fa-download"></i>
