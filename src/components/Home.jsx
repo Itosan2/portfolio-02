@@ -28,7 +28,7 @@ export default function Home(props) {
               <a href="#" className="main-btn">
                 <span className="btn-text">Portfolio Page</span>
                 <span className="btn-icon">
-                  <i className="fas fa-download"></i>
+                  <i className="fas fa-user"></i>
                 </span>
               </a>
             </div>

@@ -81,7 +81,7 @@ export default function Contact() {
                 <a href="#" className="main-btn">
                   <span className="btn-text">Submit</span>
                   <span className="btn-icon">
-                    <i className="fas fa-download"></i>
+                    <i className="fas fa-envelope-open"></i>
                   </span>
                 </a>
               </div>
