@@ -70,7 +70,7 @@ export default function About(props) {
       </div>
       <div className="about-container">
         <div className="left-about">
-          <h4 className="text-info2">Other Skills</h4>
+          <h4 className="text-info">Other Skills</h4>
           <p>
             Using Excel Visual Basic for Applocations to generate Financial
             Statement and reports (eg Balance Sheet, Income Statement, cash flow
