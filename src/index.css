@@ -182,7 +182,7 @@ section {
   border-radius: 100px;
   /* border: 1px solid black; */
   background-color: white;
-  outline: 1px solid black;
+  /* outline: 1px solid black; */
   box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   margin-bottom: 50px;
@@ -210,6 +210,8 @@ section {
   background-color: white;
   /* outline: 1px solid black; */
   /* transform: translateX(-8px); */
+  height: 18px;
+  width: 18px;
   left: calc(100% - 20px - 2px);
 }
 
@@ -1352,5 +1354,6 @@ section {
 
   .ports {
     grid-template-columns: 1fr;
+    color: rgb(20, 168, 0);
   }
 }

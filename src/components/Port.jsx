@@ -6,8 +6,19 @@ import img4 from "../assets/port4.jpg";
 import img5 from "../assets/port5.jpg";
 import img6 from "../assets/port6.jpg";
 import img7 from "../assets/port7.jpg";
+import img8 from "../assets/port8.jpg";
+import img9 from "../assets/port9.jpg";
+import img10 from "../assets/port10.jpg";
+import img11 from "../assets/food.png";
 
 const portItem = [
+  {
+    id: 9,
+    img: img9,
+    title: "Van-life - React Router-6",
+    text: "A React project focusing on React Router v6.4. Using new features like createBrowserRouter, action, loader,Await,defer etc",
+    url: "https://itosan2.github.io/van-life/",
+  },
   {
     id: 7,
     img: img7,
@@ -16,12 +27,34 @@ const portItem = [
     url: "https://itosan2.github.io/ecomm/",
   },
   {
+    id: 11,
+    img: img11,
+    title: "Food",
+    text: "Using React Router 6 and working with images editing. Exploring with some Framer Motion animation ",
+    url: "https://itosan2.github.io/food/",
+  },
+  {
+    id: 8,
+    img: img8,
+    title: "Studybud Chatroom",
+    text: "Django chatroom project. This a CRUD apps with login, logout and registration pages and search function. Here is the link to the codes.",
+    url: "https://github.com/Itosan2/studybud",
+  },
+  {
+    id: 10,
+    img: img10,
+    title: "Sudoku",
+    text: "Credit to Mr.Tran Anh Tuat. Messing around with CSS",
+    url: "https://itosan2.github.io/sudoku",
+  },
+  {
     id: 1,
     img: img1,
     title: "Building a neat-looking portfolio website",
     text: "Create a desktop and mobile version website from Adobe XD. Using some cold css styling with a bit of Javascript",
     url: "https://itosan2.github.io/portfolio/",
   },
+
   {
     id: 2,
     img: img2,
