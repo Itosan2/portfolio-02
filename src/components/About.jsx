@@ -80,7 +80,7 @@ export default function About(props) {
             sytem, Debtor collection and Inventory Management.
           </p>
           <div className="btn-con" onClick={props.handleClick}>
-            <a href={<Port />} className="main-btn">
+            <a href="#" className="main-btn">
               <span className="btn-text">Portfolio Page</span>
               <span className="btn-icon">
                 <i className="fas fa-user"></i>
