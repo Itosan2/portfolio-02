@@ -3,13 +3,6 @@ import Modal from "./Modal";
 import emailjs from "@emailjs/browser";
 
 // import FontChecker from "./FontChecker";
-import { reducer } from "./Reducer";
-
-const defaultState = {
-  people: [],
-  isModalOpen: false,
-  modalContent: "hello user",
-};
 
 export default function Contact() {
   const [person, setPerson] = useState({
@@ -19,7 +12,8 @@ export default function Contact() {
     textarea: "",
   });
   const [people, setPeople] = useState([]);
-  const [state, dispatch] = useReducer(reducer, defaultState);
+  const [showModal, setShowModal] = useState(false);
+  const [state, dispatch] = useReducer(reducer);
   const form = useRef();
 
   const handleChange = (e) => {
@@ -27,29 +21,14 @@ export default function Contact() {
     const value = e.target.value;
     setPerson({ ...person, [name]: value });
   };
-  const handleSubmit = () => {
-    // e.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault();
     if (person.firstName && person.email && person.subject) {
-      const newPerson = { id: new Date().getTime().toString() };
-      dispatch({ type: "ADD_ITEM", payload: newPerson });
-    } else {
-      dispatch({ type: "NO_VALUE" });
+      setShowModal(true);
+      const newPerson = { ...person, id: new Date().getTime().toString() };
+      setPeople([...people, newPerson]);
+      setPerson({ firstName: "", email: "", subject: "", textarea: "" });
     }
-
-    // if (person.firstName && person.email && person.subject) {
-    //   setShowModal(true);
-    //   const newPerson = { ...person, id: new Date().getTime().toString() };
-    //   // setPeople([...people, newPerson]);
-    //   setPerson({ firstName: "", email: "", subject: "", textarea: "" });
-    //   console.log("sucessful");
-    // } else {
-    //   console.log("not sucessful");
-    // }
-  };
-
-  const closeModal = () => {
-    dispatch({ type: "CLOSE_MODAL" });
-    setPerson({ firstName: "", email: "", subject: "", textarea: "" });
   };
 
   const sendEmail = (e) => {
@@ -64,7 +43,6 @@ export default function Contact() {
       .then(
         (result) => {
           console.log(result.text);
-          handleSubmit();
         },
         (error) => {
           console.log(error.text);
@@ -133,17 +111,10 @@ export default function Contact() {
           </div>
 
           <div className="right-contact">
-            <form className="contact-form" onSubmit={sendEmail} ref={form}>
-              <h2>Message Me</h2>
-              <div className="modal-container">
-                {state.isModalOpen && (
-                  <Modal
-                    closeModal={closeModal}
-                    modalContent={person.firstName}
-                  />
-                )}
-              </div>
+            {showModal && <Modal />}
 
+            <form className="contact-form" onSubmit={handleSubmit} ref={form}>
+              <h2>Message Me</h2>
               <div className="inputBox">
                 <input
                   type="text"
