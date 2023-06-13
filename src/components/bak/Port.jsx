@@ -1,6 +1,4 @@
-import React, { useState } from "react";
-import Pagination from "./pagination/Pagination";
-
+import React from "react";
 import img1 from "../assets/port1.jpg";
 import img2 from "../assets/port2.jpg";
 import img3 from "../assets/port3.jpg";
@@ -38,11 +36,11 @@ const portItem = [
     url: "https://github.com/Itosan2/gym",
   },
   {
-    id: 13,
+    id: 14,
     img: imgPagination,
     title: "Pagination - fetching data from jsonplaceholder",
-    text: "Paginate data from jsonplaceholder and making Pagination component reusable.",
-    url: "https://itosan2.github.io/pagination/",
+    text: "Paginate data from jsonplaceholder and making Pagination component reusable",
+    url: "https://github.com/Itosan2/gym",
   },
   {
     id: 11,
@@ -111,25 +109,6 @@ const portItem = [
 ];
 
 export default function Port() {
-  const [data, setData] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage, setItemsPerPage] = useState(6);
-
-  //Change Page
-  // const paginate = (pageNumber) => {
-  const paginate = () => {
-    console.log("paginate", paginate);
-    const element = document.getElementById("ports");
-    if (element) {
-      // setCurrentPage(pageNumber);
-      element.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-        inline: "nearest",
-      });
-    }
-  };
-
   return (
     <section className="section sec4" id="ports">
       <div className="ports-content">
@@ -140,17 +119,8 @@ export default function Port() {
           </h2>
         </div>
         <p className="port-para">Here is a selection of my works</p>
-        {/* <div className="ports"> */}
-        <div className="">
-          <Pagination
-            data={portItem}
-            currentPage={currentPage}
-            setCurrentPage={setCurrentPage}
-            itemsPerPage={itemsPerPage}
-            paginate={paginate}
-          />
-
-          {/* {portItem.map((item) => {
+        <div className="ports">
+          {portItem.map((item) => {
             return (
               <div key={item.id} className="port">
                 <a href={item.url} target="_blank">
@@ -162,7 +132,7 @@ export default function Port() {
                 </a>
               </div>
             );
-          })} */}
+          })}
         </div>
       </div>
     </section>
